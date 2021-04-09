@@ -1,25 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import './css/App.css'
+import React, { useState, useEffect } from 'react';
+import Users from './components/Users';
 
-function App() {
+export default function App() {
+
+	const [users, setUsers] = useState([]);
+	const [activeUser, setActiveUser] = useState(null);  
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      {/* <Navbar activeUser={activeUser} setActiveUser={setActiveUser}/>
+      <Switch>
+        <Route exact path='/albums/:id' render={(routerProps) => <AlbumDetails match={routerProps.match} />} />;
+        <Route exact path='/post' render={() => <PostAlbum />} />
+      </Switch> */}
     </div>
   );
 }
-
-export default App;
